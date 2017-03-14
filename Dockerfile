@@ -37,6 +37,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     --disable-doc --enable-fpm \
     --localstatedir=/var/run/quagga --sysconfdir=/etc/quagga \
     --enable-user=`whoami` --enable-group=`whoami` \
+ && mkdir /var/run/quagga \
  && make \
  && make install \
  && ldconfig \
