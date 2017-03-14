@@ -1,0 +1,10 @@
+version: '3'
+services:
+  quagga-git:
+    build:
+      context: .
+      args:
+        branch_name: quagga-1.2.1
+    image: iwaseyusuke/quagga-git:quagga-1.2.1
+    tty: true
+    privileged: true
